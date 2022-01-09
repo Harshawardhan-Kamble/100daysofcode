@@ -9,16 +9,17 @@ class Complex{
         real=r;
         imaginary=i;
     }
-    Complex operator+ (Complex x){
-        Complex t;
-        t.real=real+x.real;
-        t.imaginary=imaginary+x.imaginary;
-        return t;
-    }
     void display(){
         cout<<real<<"+"<<imaginary<<"i";
     }
+   friend Complex operator+ (Complex x1,Complex x2);
 };
+Complex operator+(Complex x1,Complex x2){
+        Complex t;
+        t.real=x1.real+x2.real;
+        t.imaginary=x1.imaginary+x2.imaginary;
+        return t;
+    }
 int main(){
     Complex c1(5,7);
     Complex c2(14,8);
