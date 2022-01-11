@@ -2,9 +2,7 @@
 using namespace std;
 class base{
     public:
-virtual void fun1(){
-        cout<<"Function of base";
-    }
+virtual void fun1()=0;
 };
 class derived:public base{
     public:
