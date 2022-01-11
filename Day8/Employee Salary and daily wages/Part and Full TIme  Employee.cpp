@@ -25,7 +25,7 @@ class Part: public Employee{
     private:
     int wage;
     public:
-    Part(int id,string name,int wage):Employee(id,name){
+    Part(int id,string name,int wage):Employee(id,name){//:Employee(id,name)
         this->wage=wage;
     }
     int getWage(){return wage;}
